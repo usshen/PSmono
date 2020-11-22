@@ -7,10 +7,20 @@ Install MonoTorrent to project: Install-Package MonoTorrent -Version 1.0.25, the
 
 https://www.nuget.org/packages/MonoTorrent/
 
+Example:
+
 [string]$assemblyPath = 'monoTest\monoTest\bin\Debug\monoTest.dll'
 
 Add-Type -Path $assemblyPath
 
 $Torrent=New-Object PSmono.PSMonoOBJ
 
-$Torrent.hashinfomation('torrentfile.torrent')
+$Torrent.GetHash(torrentfile)
+
+$Torrent.GetComment(torrentfile)
+
+$Torrent.GetTorrentName(torrentfile)
+
+$Torrent.GetTorrentSize(torrentfile) / 1GB
+
+$Torrent.GetTorrentFiles(torrentfile)
