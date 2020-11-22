@@ -9,11 +9,10 @@ namespace PSmono
             
         }
 
-        public string Hashinfomation(string torrentfile)
+        public string GetHash(string torrentfile)
         {
-            InfoHash Tinfohash;
-            Tinfohash = MonoTorrent.Torrent.Load(torrentfile).InfoHash;
-            return Tinfohash.ToHex();
+            
+            return MonoTorrent.Torrent.Load(torrentfile).InfoHash.ToHex();
         }
         
         public string GetComment(string torrentfile)
