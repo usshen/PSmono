@@ -9,7 +9,7 @@ https://www.nuget.org/packages/MonoTorrent/
 
 Example:
 
-[string]$assemblyPath = 'monoTest\monoTest\bin\Debug\monoTest.dll'
+[string]$assemblyPath = 'monoTest\monoTest.dll'
 
 Add-Type -Path $assemblyPath
 
